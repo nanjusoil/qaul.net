@@ -3,11 +3,13 @@ jobs:
   build:
     docker:
       - image: cirrusci/flutter
+      - image: cirrusci/android-sdk:30
     steps:
       - checkout
       - run: sudo apt-get update
       - run: sudo apt-get -y install sqlite3 libsqlite3-dev
       - run: flutter doctor
+      - run: gradlew tasks
       - run: flutter test
       - run: flutter analyze
       - run: flutter -v build apk
