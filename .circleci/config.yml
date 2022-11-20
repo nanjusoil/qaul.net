@@ -10,8 +10,6 @@ jobs:
   build:
     executor:
       name: android/android-machine
-      resource-class: xlarge
-      tag: 2022.03.1
     steps:
       - checkout
       - run: flutter build apk --debug
