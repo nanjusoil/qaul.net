@@ -18,6 +18,7 @@ workflows:
                     qaul_ui/.* run-flutter-workflow true
                     rust/.* run-rust-workflow true
                 name: default-setup
+                
             - continuation/continue:
                 configuration_path: .circleci/continue-config.yml
                 filters:
