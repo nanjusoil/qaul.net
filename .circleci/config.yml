@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get update
-      - run: sudo apt-get install sqlite3 libsqlite3-dev
+      - run: sudo apt-get install -y sqlite3 libsqlite3-dev
       - run: flutter doctor
       - run: gradlew tasks
       - run: flutter test
